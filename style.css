@@ -8,4 +8,6 @@ table{
 .inp-radio{
     height: 2em;
     width: 2em;
+}.vote-icon{
+    width: 9em;
 }
