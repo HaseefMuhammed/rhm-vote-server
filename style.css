@@ -1,0 +1,11 @@
+table{
+    text-transform: uppercase;
+}
+.vote-name{
+    font-size: 1em;
+    font-weight: bolder;
+}
+.inp-radio{
+    height: 2em;
+    width: 2em;
+}

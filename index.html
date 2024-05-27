@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election - RHM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon (4).png" type="image/logo">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="submit-form" action="">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">name</th>
+                    <th scope="col">emblem</th>
+                    <th scope="col">vote</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="vote-name">HASEEF MUHAMMED PC - X</td>
+                    <td><img class="img-fluid vote-icon" src="images/umbrella.png" alt=""></td>
+                    <td><input class="inp-radio" type="radio" name="vote" value="HASEEF-X" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td class="vote-name">aDIL - IX</td>
+                    <td><img class="img-fluid vote-icon" src="images/book.png" alt=""></td>
+                    <td><input class="inp-radio" type="radio" name="vote" value="ADIL-IX" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td class="vote-name">ASHIK - XI</td>
+                    <td><img class="img-fluid vote-icon" src="images/bord.png" alt=""></td>
+                    <td><input class="inp-radio" type="radio" name="vote" value="ASHIK-XI" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td class="vote-name">NAZAL - VII</td>
+                    <td><img class="img-fluid vote-icon" src="images/cap.png" alt=""></td>
+                    <td><input class="inp-radio" type="radio" name="vote" value="NAZAL-VII" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td class="vote-name">Invalid vote</td>
+                    <td><img class="img-fluid vote-icon" src="images/invalid.png" alt=""></td>
+                    <td><input class="inp-radio" type="radio" name="vote" value="INVALID" required></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="btn-container align-items-center text-center">
+              <button class="btn btn-primary p-3" type="submit" >Vote <i class="fa-solid fa-check-to-slot"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycby5wk7oV3XSudEEIhvXrL4DDdgi52pjq3xxIyvQYnkncevhqi9z4VvY2xGiEwwHS-VckQ/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    //alert("Voted successfully")
+                    //window.location.reload()
+                    window.location.href="girls.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3945bc0b8d.js" crossorigin="anonymous"></script>
+</body>
+</html>
