@@ -20,6 +20,16 @@ table {
     background-color: red;
     color: white;
 }
+.sbt:hover {
+    background-color: red;
+    color: white;
+}
+.sbt{
+    background-color: #0d6efc;
+    border: 2px solid black;
+    color: white;
+    border-radius: 3px;
+}
 
 .clicked-button {
     background-color: rgb(255, 0, 0); /* Change this to the desired color */
