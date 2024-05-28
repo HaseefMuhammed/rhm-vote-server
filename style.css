@@ -1,13 +1,28 @@
-table{
+table {
     text-transform: uppercase;
 }
-.vote-name{
+
+.vote-name {
     font-size: 1em;
     font-weight: bolder;
 }
-.inp-radio{
+
+.inp-radio {
     height: 2em;
     width: 2em;
-}.vote-icon{
+}
+
+.vote-icon {
     width: 6em;
+}
+
+.sbt:active {
+    background-color: red;
+    color: white;
+}
+
+.clicked-button {
+    background-color: rgb(255, 0, 0); /* Change this to the desired color */
+    border-color: rgb(255, 4, 4); /* Change border color if needed */
+    color: white; /* Change text color if needed */
 }
