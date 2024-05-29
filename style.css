@@ -25,16 +25,17 @@ table {
     color: white;
 }
 .sbt{
-    background-color: #0d6efc;
+    background-color: green;
     border: 2px solid black;
-    color: white;
     border-radius: 3px;
+    width: 5em;
 }
 
 .clicked-button {
     background-color: rgb(255, 0, 0); /* Change this to the desired color */
     border-color: rgb(255, 4, 4); /* Change border color if needed */
     color: white; /* Change text color if needed */
+    
 }
 .start-btn{
     width: 9em;

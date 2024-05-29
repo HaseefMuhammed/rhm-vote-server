@@ -11,15 +11,15 @@
 </head>
 <body>
     <div class="container">
-      <h3 class="text-center">Boys</h3>
+        <h3 class="text-center">Boys</h3>
         <form id="submit-form" action="">
             <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">emblem</th>
-                    <th scope="col">vote</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Emblem</th>
+                    <th scope="col">Vote</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -27,61 +27,71 @@
                     <th scope="row">1</th>
                     <td class="vote-name">HASEEF MUHAMMED PC - X</td>
                     <td><img class="img-fluid vote-icon" src="images/umbrella.png" alt=""></td>
-                    <td><input class="inp-radio" type="radio" name="vote" value="HASEEF-X" required></td>
+                    <td><button value="HASEEF-X" class="p-3 vote-button sbt" type="button">Vote</button></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td class="vote-name">aDIL - IX</td>
+                    <td class="vote-name">ADIL - IX</td>
                     <td><img class="img-fluid vote-icon" src="images/book.png" alt=""></td>
-                    <td><input class="inp-radio" type="radio" name="vote" value="ADIL-IX" required></td>
+                    <td><button value="ADIL-IX" class="p-3 vote-button sbt" type="button">Vote</button></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td class="vote-name">ASHIK - XI</td>
+                    <td class="vote-name">ASHIK - XII</td>
                     <td><img class="img-fluid vote-icon" src="images/bord.png" alt=""></td>
-                    <td><input class="inp-radio" type="radio" name="vote" value="ASHIK-XI" required></td>
+                    <td><button value="ASHIK-XII" class="p-3 vote-button sbt" type="button">Vote</button></td>
                   </tr>
                   <tr>
                     <th scope="row">4</th>
                     <td class="vote-name">NAZAL - VIII</td>
                     <td><img class="img-fluid vote-icon" src="images/cap.png" alt=""></td>
-                    <td><input class="inp-radio" type="radio" name="vote" value="NAZAL-VIII" required></td>
+                    <td><button value="NAZAL-VIII" class="p-3 vote-button sbt" type="button">Vote</button></td>
                   </tr>
                   <tr>
-                    <th scope="row">4</th>
+                    <th scope="row">5</th>
                     <td class="vote-name">Invalid vote</td>
                     <td><img class="img-fluid vote-icon" src="images/invalid.png" alt=""></td>
-                    <td><input class="inp-radio" type="radio" name="vote" value="INVALID" required></td>
+                    <td><button value="INVALID" class="p-3 vote-button sbt" type="button">Vote</button></td>
                   </tr>
                 </tbody>
               </table>
               <div class="btn-container align-items-center text-center">
-              <button id="vote-button" class=" p-3 sbt" type="submit" >Vote <i class="fa-solid fa-check-to-slot"></i></button>
-            </div>
+              </div>
         </form>
     </div>
 
-    <p class="mt-3">Powered by : www.webcraaft.42web.io <br> Developed by : Haseef Muhammed PC</p>
+    <p class="mt-3">Powered by: www.webcraaft.42web.io <br> Developed by: Haseef Muhammed PC</p>
 
     <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
+        // Handle vote button clicks
+        $(".vote-button").click(function() {
+            var voteValue = $(this).val();
+            // Add hidden input with the vote value
+            $('<input>').attr({
+                type: 'hidden',
+                name: 'vote',
+                value: voteValue
+            }).appendTo('#submit-form');
+            // Submit the form
+            $("#submit-form").submit();
+        });
+
+        // Handle form submission with AJAX
+        $("#submit-form").submit((e) => {
+            e.preventDefault(); // Prevent default form submission
 
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycby5wk7oV3XSudEEIhvXrL4DDdgi52pjq3xxIyvQYnkncevhqi9z4VvY2xGiEwwHS-VckQ/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
-                    //alert("Voted successfully")
-                    //window.location.reload()
-                    window.location.href="girls.html"
+                url: "https://script.google.com/macros/s/AKfycby5wk7oV3XSudEEIhvXrL4DDdgi52pjq3xxIyvQYnkncevhqi9z4VvY2xGiEwwHS-VckQ/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function(response) {
+                    window.location.href = "girls.html"; // Redirect on success
                 },
-                error:function (err){
-                    alert("Something Error")
-    
+                error: function(err) {
+                    alert("Something went wrong");
                 }
-            })
-        })
+            });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
