@@ -36,3 +36,6 @@ table {
     border-color: rgb(255, 4, 4); /* Change border color if needed */
     color: white; /* Change text color if needed */
 }
+.start-btn{
+    width: 9em;
+}
