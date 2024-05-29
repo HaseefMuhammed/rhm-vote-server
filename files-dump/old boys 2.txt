@@ -63,14 +63,9 @@
     <p class="mt-3">Powered by: www.webcraaft.42web.io <br> Developed by: Haseef Muhammed PC</p>
 
     <script>
-        // Create an audio element for the sound effect
-        var beepSound = new Audio('images/beep.mp3');
-
         // Handle vote button clicks
         $(".vote-button").click(function() {
             var voteValue = $(this).val();
-            // Play the beep sound
-            beepSound.play();
             // Add hidden input with the vote value
             $('<input>').attr({
                 type: 'hidden',

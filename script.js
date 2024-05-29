@@ -1,3 +1,5 @@
+`use strict`;
+
 console.log("Script Idle");
 
 let audio = new Audio("images/clip.mp3");
@@ -8,3 +10,8 @@ function start() {
         window.location.href = 'index.html';
     };
 }
+
+
+// 
+
+//   Tap Tap
