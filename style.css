@@ -45,7 +45,7 @@ table {
     width: 10em;
     font-weight: bolder;
     animation: fade;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;   
 }
 
