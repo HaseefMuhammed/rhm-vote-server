@@ -27,8 +27,9 @@ table {
 .sbt{
     background-color: green;
     border: 2px solid black;
-    border-radius: 3px;
-    width: 5em;
+    border-radius: 13px;
+    height: 5em;
+    width: 9em;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -37,8 +38,39 @@ table {
     background-color: rgb(255, 0, 0); /* Change this to the desired color */
     border-color: rgb(255, 4, 4); /* Change border color if needed */
     color: white; /* Change text color if needed */
+    height: 6em;
     
 }
 .start-btn{
-    width: 9em;
+    width: 10em;
+    font-weight: bolder;
+    animation: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;   
+}
+
+@keyframes fade{
+    /* from{opacity:0.0 ;}
+    to{opacity: 1;} */
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.usr-txt{
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      font-style: italic;
+
+}
+
+.vote-head{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    font-style: normal;
 }
